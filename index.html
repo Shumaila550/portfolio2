@@ -3,251 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+<title>Shumaila | Developer Portfolio</title>
 
 <style>
-
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:Arial, Helvetica, sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui;}
 body{
-background:#0f172a;
-color:white;
+  background: radial-gradient(circle at top,#0f172a,#020617);
+  color:#e6edf3;
+  scroll-behavior:smooth;
 }
 
 /* NAVBAR */
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:#020617;
-position:sticky;
-top:0;
-z-index:1000;
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  backdrop-filter:blur(10px);
+  background:rgba(2,6,23,.7);
+  z-index:1000;
 }
+nav h2{color:#22d3ee}
+nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+nav a{color:#cbd5e1;text-decoration:none;font-weight:500;transition:.3s}
+nav a:hover{color:#22d3ee}
 
-nav ul{
-display:flex;
-list-style:none;
-gap:30px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:500;
-}
-
-/* HERO */
-.hero{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:80px 8%;
-min-height:90vh;
-}
-
-/* TEXT ANIMATION */
-.hero-text{
-max-width:520px;
-opacity:0;
-transform:translateY(40px);
-animation:textFade 1s ease forwards;
-animation-delay:.3s;
-}
-
-@keyframes textFade{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.hero-text h1{
-font-size:42px;
-margin-bottom:15px;
-}
-
-.hero-text p{
-color:#94a3b8;
-margin-bottom:25px;
-line-height:1.6;
-}
-
-/* CV BUTTON ALIGNMENT FIXED */
-.cv-btn{
-display:inline-block;
-background:#22c55e;
-padding:12px 28px;
-border-radius:6px;
-text-decoration:none;
-color:white;
-margin-top:10px;
-}
-
-/* PROFILE IMAGE SEPARATE ANIMATION */
-.hero-img{
-opacity:0;
-transform:translateX(60px);
-animation:imgFade 1.2s ease forwards;
-animation-delay:1.1s;
-}
-
-@keyframes imgFade{
-to{
-opacity:1;
-transform:translateX(0);
-}
-}
-
-.hero-img img{
-width:260px;
-border-radius:50%;
-border:5px solid #1e293b;
+/* NAVBAR CV BUTTON */
+.nav-cv{
+  background:#22d3ee;
+  padding:8px 18px;
+  border-radius:6px;
+  color:#021014;
+  font-weight:600;
 }
 
 /* SECTIONS */
-section{
-padding:80px 8%;
+section{max-width:1000px;margin:auto;padding:90px 20px}
+section h2{text-align:center;margin-bottom:45px;color:#22d3ee}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-top:120px;
+}
+.hero-wrap{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:60px;
 }
 
-h2{
-font-size:30px;
-margin-bottom:30px;
+/* IMAGE ANIMATION SEPARATE */
+.hero img{
+  width:220px;border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+  opacity:0;
+  transform:translateX(-60px);
+  animation:imgFade 1s ease forwards;
+  animation-delay:.4s;
 }
 
-/* PROJECT CARDS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+@keyframes imgFade{
+  to{opacity:1;transform:translateX(0)}
 }
 
-.card{
-background:#020617;
-padding:25px;
-border-radius:10px;
+/* TEXT ANIMATION SEPARATE */
+.hero-text{
+  opacity:0;
+  transform:translateY(50px);
+  animation:textFade 1s ease forwards;
+  animation-delay:1.1s;
 }
 
-/* CONTACT FORM */
+@keyframes textFade{
+  to{opacity:1;transform:translateY(0)}
+}
+
+.hero h1{font-size:3rem;margin:10px 0}
+.hero h1 span{color:#22d3ee}
+.hero h3{color:#94a3b8;margin-bottom:18px}
+.hero p{max-width:500px;color:#cbd5e1;line-height:1.7}
+
+.btn{
+  display:inline-block;margin-top:25px;
+  padding:12px 28px;border-radius:8px;
+  background:#22d3ee;color:#021014;
+  text-decoration:none;font-weight:600;
+  transition:.3s;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(34,211,238,.35)}
+
+/* SKILLS */
+.skills{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.skills span{
+  padding:10px 18px;border-radius:40px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.project-card{
+  padding:24px;border-radius:16px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.06);
+}
+
+/* CONTACT */
 form{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:500px;
+  max-width:500px;margin:auto;
+  background:rgba(255,255,255,.05);
+  padding:35px;border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+}
+input,textarea{
+  width:100%;padding:14px;margin-bottom:15px;
+  border:none;border-radius:8px;
+  background:#020617;color:white;
 }
 
-input, textarea{
-padding:12px;
-border:none;
-border-radius:5px;
+/* CV SECTION FIXED */
+.cv{
+  text-align:center;
+  background:linear-gradient(to top,#020617,#020617,#0f172a);
+  padding-bottom:120px;
 }
-
-button{
-background:#22c55e;
-border:none;
-padding:12px;
-color:white;
-border-radius:6px;
-cursor:pointer;
+.cv p{margin-bottom:20px}
+.cv a{
+  display:inline-block;
+  margin-top:10px;
+  padding:14px 34px;
+  border-radius:8px;
+  background:#22d3ee;
+  color:#021014;
+  text-decoration:none;
+  font-weight:600;
 }
 
 /* FOOTER */
-footer{
-text-align:center;
-padding:40px 8%;
-background:#020617;
-}
+footer{text-align:center;padding:40px;color:#64748b}
 
-footer a{
-color:#38bdf8;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
-}
-
+/* SCROLL ANIMATION */
+.reveal{opacity:0;transform:translateY(60px);transition:1s}
+.reveal.active{opacity:1;transform:translateY(0)}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-<h3>MyPortfolio</h3>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+  <h2>Shumaila</h2>
+  <ul>
+    <li><a href="#home">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="cv.pdf" class="nav-cv" download>CV</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero reveal" id="home">
+<div class="hero-wrap">
+
+<img src="profile.jpg" alt="Profile">
 
 <div class="hero-text">
-<h1>Hello, I'm Shumaila</h1>
-<p>Web developer passionate about building modern websites and applications.</p>
-
-<a href="cv.pdf" class="cv-btn">Download CV</a>
+<p>Hello, I'm</p>
+<h1><span>Shumaila</span></h1>
+<h3>Python & Web Developer</h3>
+<p>I create responsive web applications using Python, Flask, JavaScript and databases with clean UI and scalable backend.</p>
+<a href="#projects" class="btn">View My Work</a>
 </div>
 
-<div class="hero-img">
-<img src="profile.jpg" alt="profile">
 </div>
+</section>
 
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+<h2>Skills</h2>
+<div class="skills">
+<span>HTML & CSS</span>
+<span>JavaScript</span>
+<span>Python</span>
+<span>Flask</span>
+<span>SQL</span>
+<span>GitHub</span>
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="reveal">
 <h2>Projects</h2>
-
-<div class="grid">
-<div class="card">Main Project 1</div>
-<div class="card">Main Project 2</div>
-<div class="card">Main Project 3</div>
+<div class="projects">
+<div class="project-card"><h3>Hospital ERP System</h3></div>
+<div class="project-card"><h3>Developer Blog</h3></div>
+<div class="project-card"><h3>Task Manager</h3></div>
 </div>
 
-<h2 style="margin-top:50px;">Mini Projects</h2>
-
-<div class="grid">
-<div class="card">Mini Project 1</div>
-<div class="card">Mini Project 2</div>
-<div class="card">Mini Project 3</div>
+<h2 style="margin-top:70px;">Mini Projects</h2>
+<div class="projects">
+<div class="project-card"><h3>Calculator</h3></div>
+<div class="project-card"><h3>To-Do App</h3></div>
+<div class="project-card"><h3>Login UI</h3></div>
 </div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="reveal">
 <h2>Get In Touch</h2>
-
 <form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Message" rows="4" required></textarea>
+<button class="btn">Send Message</button>
 </form>
-
 </section>
 
-<!-- FOOTER -->
-<footer>
+<!-- CV -->
+<section class="cv reveal" id="cv">
+<h2>Download My CV</h2>
+<p>You can download my latest resume here</p>
+<a href="cv.pdf" download>Download CV</a>
+</section>
 
-<h3>Download My CV</h3>
-<a href="cv.pdf">Click here to download</a>
+<footer>© 2026 Shumaila — Developer Portfolio</footer>
 
-<br><br>
-
-<a href="https://linkedin.com">My LinkedIn Profile</a>
-
-</footer>
+<script>
+const reveals=document.querySelectorAll(".reveal");
+function revealOnScroll(){
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
+      el.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll",revealOnScroll);
+window.addEventListener("load",revealOnScroll);
+</script>
 
 </body>
 </html>
