@@ -6,8 +6,6 @@
 <title>Shumaila | Developer Portfolio</title>
 
 <style>
-
-/* ===== GLOBAL ===== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui;}
 body{
   background: radial-gradient(circle at top,#0f172a,#020617);
@@ -15,7 +13,7 @@ body{
   scroll-behavior:smooth;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 nav{
   position:fixed;
   top:0;
@@ -27,317 +25,208 @@ nav{
   background:rgba(2,6,23,.7);
   z-index:1000;
 }
-
 nav h2{color:#22d3ee}
-
 nav ul{display:flex;gap:28px;list-style:none}
-nav a{
-  color:#cbd5e1;
-  text-decoration:none;
-  font-weight:500;
-  transition:.3s;
-}
+nav a{color:#cbd5e1;text-decoration:none;font-weight:500;transition:.3s}
 nav a:hover{color:#22d3ee}
 
-/* ===== HERO ===== */
+/* SECTIONS */
+section{max-width:1000px;margin:auto;padding:90px 20px}
+section h2{text-align:center;margin-bottom:45px;color:#22d3ee}
+
+/* HERO */
 .hero{
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-align:center;
-  padding:120px 20px;
+  padding-top:120px;
 }
-
-.hero h1{
-  font-size:3.3rem;
-  margin:10px 0;
+.hero-wrap{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:60px;
 }
-
+.hero img{
+  width:220px;border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.hero h1{font-size:3rem;margin:10px 0}
 .hero h1 span{color:#22d3ee}
-
-.hero h3{
-  font-weight:500;
-  color:#94a3b8;
-  margin-bottom:18px;
-}
-
-.hero p{
-  max-width:520px;
-  margin:auto;
-  line-height:1.8;
-  color:#cbd5e1;
-}
+.hero h3{color:#94a3b8;margin-bottom:18px}
+.hero p{max-width:500px;color:#cbd5e1;line-height:1.7}
 
 .btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:12px 28px;
-  border-radius:8px;
-  background:#22d3ee;
-  color:#021014;
-  text-decoration:none;
-  font-weight:600;
+  display:inline-block;margin-top:25px;
+  padding:12px 28px;border-radius:8px;
+  background:#22d3ee;color:#021014;
+  text-decoration:none;font-weight:600;
   transition:.3s;
 }
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(34,211,238,.35);
-}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(34,211,238,.35)}
 
-/* ===== SECTIONS ===== */
-section{
-  max-width:1000px;
-  margin:auto;
-  padding:80px 20px;
-}
-
-section h2{
-  text-align:center;
-  margin-bottom:45px;
-  color:#22d3ee;
-}
-
-/* ===== SKILLS ===== */
-.skills{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:14px;
-}
-
+/* SKILLS */
+.skills{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
 .skills span{
-  padding:10px 18px;
-  border-radius:40px;
+  padding:10px 18px;border-radius:40px;
   background:rgba(255,255,255,.05);
   border:1px solid rgba(255,255,255,.08);
-  backdrop-filter:blur(6px);
-  transition:.3s;
 }
-.skills span:hover{
-  border-color:#22d3ee;
-  background:rgba(34,211,238,.12);
-}
+.skills span:hover{border-color:#22d3ee;background:rgba(34,211,238,.12)}
 
-/* ===== PROJECTS ===== */
+/* PROJECTS */
 .projects{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
 }
-
 .project-card{
-  padding:24px;
-  border-radius:16px;
+  padding:24px;border-radius:16px;
   background:rgba(255,255,255,.05);
   border:1px solid rgba(255,255,255,.06);
-  backdrop-filter:blur(10px);
   transition:.4s;
 }
-.project-card:hover{
-  transform:translateY(-6px);
-  border-color:#22d3ee;
+.project-card:hover{transform:translateY(-6px);border-color:#22d3ee}
+.project-card a{color:#22d3ee;text-decoration:none;font-weight:600}
+
+/* CONTACT FORM */
+form{
+  max-width:500px;margin:auto;
+  background:rgba(255,255,255,.05);
+  padding:35px;border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+}
+input,textarea{
+  width:100%;padding:14px;margin-bottom:15px;
+  border:none;border-radius:8px;
+  background:#020617;color:white;
 }
 
-.project-card h3{margin-bottom:10px}
-.project-card p{color:#cbd5e1}
+/* CV */
+.cv{text-align:center;background:linear-gradient(to top,#020617,#020617,#0f172a)}
+.cv a{padding:14px 34px;border-radius:8px;background:#22d3ee;color:#021014;text-decoration:none}
 
-.project-card a{
-  display:inline-block;
-  margin-top:15px;
-  color:#22d3ee;
-  text-decoration:none;
-  font-weight:600;
-}
+/* FOOTER */
+footer{text-align:center;padding:40px;color:#64748b}
 
-/* ===== CV SECTION ===== */
-.cv{
-  text-align:center;
-  padding:90px 20px;
-  background:linear-gradient(to top,#020617,#020617,#0f172a);
-}
-
-.cv h2{margin-bottom:15px}
-.cv p{color:#94a3b8;margin-bottom:30px}
-
-.cv a{
-  display:inline-block;
-  padding:14px 34px;
-  border-radius:8px;
-  background:#22d3ee;
-  color:#021014;
-  text-decoration:none;
-  font-weight:700;
-  transition:.3s;
-}
-.cv a:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(34,211,238,.35);
-}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:40px;
-  color:#64748b;
-}
-
+/* SCROLL ANIMATION */
+.reveal{opacity:0;transform:translateY(60px);transition:1s}
+.reveal.active{opacity:1;transform:translateY(0)}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <h2>Shumaila</h2>
   <ul>
-    <li><a href="#about">About</a></li>
-     <li><a href="#skills">Skills</a></li>
+    <li><a href="#home">About</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:50px;">
+<section class="hero reveal" id="home">
+<div class="hero-wrap">
 
-    <!-- PROFILE IMAGE -->
-    <div>
-      <img src="profile.jpg" alt="Profile"
-           style="width:220px;border-radius:20px;
-           box-shadow:0 20px 40px rgba(0,0,0,.4);
-           border:2px solid rgba(255,255,255,.08);">
-    </div>
+<img src="profile.jpg" alt="Profile">
 
-    <!-- TEXT -->
-    <div style="max-width:500px;text-align:left;">
-      <p>Hello, I'm</p>
-      <h1><span>Shumaila</span></h1>
-      <h3>Python & Web Developer</h3>
-      <p>I create responsive web applications using Python, Flask, JavaScript
-         and databases with focus on clean UI and scalable backend.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
+<div>
+<p>Hello, I'm</p>
+<h1><span>Shumaila</span></h1>
+<h3>Python & Web Developer</h3>
+<p>I create responsive web applications using Python, Flask, JavaScript and databases with clean UI and scalable backend.</p>
+<a href="#projects" class="btn">View My Work</a>
+</div>
 
-  </div>
+</div>
 </section>
 
-
 <!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>HTML & CSS</span>
-    <span>JavaScript</span>
-    <span>Python</span>
-    <span>Flask</span>
-    <span>SQL</span>
-    <span>GitHub</span>
-    <span>Database Management</span>
-  </div>
+<section id="skills" class="reveal">
+<h2>Skills</h2>
+<div class="skills">
+<span>HTML & CSS</span>
+<span>JavaScript</span>
+<span>Python</span>
+<span>Flask</span>
+<span>SQL</span>
+<span>GitHub</span>
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
+<section id="projects" class="reveal">
+<h2>Projects</h2>
+<div class="projects">
 
-  <div class="projects">
+<div class="project-card">
+<h3>Hospital ERP System</h3>
+<p>Centralized hospital solution using Flask backend.</p>
+<a href="#">Live Demo →</a>
+</div>
 
-    <div class="project-card">
-      <h3>Hospital ERP System</h3>
-      <p>Centralized hospital management solution with Flask backend.</p>
-      <a href="#">Live Demo →</a>
-    </div>
+<div class="project-card">
+<h3>Developer Blog</h3>
+<p>Responsive blog with search & dark mode.</p>
+<a href="#">Live Demo →</a>
+</div>
 
-    <div class="project-card">
-      <h3>Developer Blog</h3>
-      <p>Responsive blog with search, comments and dark mode.</p>
-      <a href="#">Live Demo →</a>
-    </div>
+<div class="project-card">
+<h3>Task Manager</h3>
+<p>Productivity app with local storage.</p>
+<a href="#">Live Demo →</a>
+</div>
 
-    <div class="project-card">
-      <h3>Task Manager App</h3>
-      <p>Simple productivity app with local storage support.</p>
-      <a href="#">Live Demo →</a>
-    </div>
+</div>
 
-  </div>
+<h2 style="margin-top:70px;">Mini Projects</h2>
 
-
-  <!-- MINI PROJECTS TITLE -->
-  <h2 style="margin-top:70px;">Mini Projects</h2>
-
-  <div class="projects">
-
-    <div class="project-card">
-      <h3>Calculator</h3>
-      <p>Responsive calculator built with HTML, CSS & JavaScript.</p>
-      <a href="#">View Demo →</a>
-    </div>
-
-    <div class="project-card">
-      <h3>To-Do App</h3>
-      <p>Task management app using local storage.</p>
-      <a href="#">View Demo →</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Animated Login UI</h3>
-      <p>Modern animated login & signup interface.</p>
-      <a href="#">View Demo →</a>
-    </div>
-
-  </div>
-</section>
-  <section id="contact" style="padding:90px 20px;text-align:center;">
-  <h2 style="color:#22d3ee;margin-bottom:20px;">Get In Touch</h2>
-
-  <form style="max-width:500px;margin:auto;
-               background:rgba(255,255,255,.05);
-               padding:35px;border-radius:16px;
-               border:1px solid rgba(255,255,255,.08);
-               backdrop-filter:blur(10px);">
-
-    <input type="text" placeholder="Your Name" required
-           style="width:100%;padding:14px;margin-bottom:15px;
-           border:none;border-radius:8px;background:#020617;color:white;">
-
-    <input type="email" placeholder="Your Email" required
-           style="width:100%;padding:14px;margin-bottom:15px;
-           border:none;border-radius:8px;background:#020617;color:white;">
-
-    <textarea placeholder="Your Message" rows="4" required
-              style="width:100%;padding:14px;margin-bottom:20px;
-              border:none;border-radius:8px;background:#020617;color:white;"></textarea>
-
-    <button type="submit" class="btn">Send Message</button>
-
-  </form>
-
-  <!-- SOCIAL LINKS -->
-  <div style="margin-top:35px;">
-    <a href="https://www.linkedin.com/in/shumaila-m-118617203" target="_blank"
-       style="color:#22d3ee;font-weight:600;text-decoration:none;">
-       Connect on LinkedIn →
-    </a>
-  </div>
-
+<div class="projects">
+<div class="project-card"><h3>Calculator</h3><a href="#">View →</a></div>
+<div class="project-card"><h3>To-Do App</h3><a href="#">View →</a></div>
+<div class="project-card"><h3>Login UI</h3><a href="#">View →</a></div>
+</div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+<h2>Get In Touch</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Message" rows="4" required></textarea>
+<button class="btn">Send Message</button>
+</form>
 
-
-<!-- CV DOWNLOAD -->
-<section class="cv" id="cv">
-  <h2>Download My CV</h2>
-  <p>You can download my latest resume here</p>
-  <a href="cv.pdf" download>Download</a>
+<div style="margin-top:30px;text-align:center;">
+<a href="https://www.linkedin.com/in/shumaila-m-118617203" target="_blank" style="color:#22d3ee;font-weight:600;">
+Connect on LinkedIn →
+</a>
+</div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  © 2026 Shumaila — Developer Portfolio
-</footer>
+<!-- CV -->
+<section class="cv reveal" id="cv">
+<h2>Download My CV</h2>
+<p>You can download my latest resume here</p>
+<a href="cv.pdf" download>Download CV</a>
+</section>
+
+<footer>© 2026 Shumaila — Developer Portfolio</footer>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+function revealOnScroll(){
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
+      el.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll",revealOnScroll);
+window.addEventListener("load",revealOnScroll);
+</script>
 
 </body>
 </html>
